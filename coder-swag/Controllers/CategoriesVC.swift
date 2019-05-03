@@ -52,6 +52,11 @@ class CategoriesVC : UIViewController, UITableViewDataSource, UITableViewDelegat
         if let productsVC = segue.destination as? ProductsVC {
             assert(sender as? Category != nil) // crash application if we did not receive a Category from PerformSegue
             productsVC.initProductsVC(category: sender as! Category)
+            
+            let barBtn = UIBarButtonItem()
+            barBtn.title = "Back"
+            navigationItem.backBarButtonItem = barBtn
+
         }
     }
 }

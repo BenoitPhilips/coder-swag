@@ -28,7 +28,7 @@ class ProductsVC: UIViewController, UICollectionViewDataSource, UICollectionView
         productsCollection.delegate = self
         
         categoryTitle.text = SelectedCategory.title
-
+ 
    }
     
     func initProductsVC (category: Category) {
