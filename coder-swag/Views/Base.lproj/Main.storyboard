@@ -168,7 +168,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Zc-L0-XYX" firstAttribute="bottom" secondItem="Mhd-jo-rCP" secondAttribute="bottom" id="BAh-3z-GU4"/>
                             <constraint firstItem="Mhd-jo-rCP" firstAttribute="trailing" secondItem="thV-Eh-V2e" secondAttribute="trailing" constant="30" id="Mom-kL-LaX"/>
