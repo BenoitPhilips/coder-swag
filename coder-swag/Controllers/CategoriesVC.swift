@@ -13,7 +13,6 @@ class CategoriesVC : UIViewController, UITableViewDataSource, UITableViewDelegat
     
     //--------------------------------------------------------------------------
  
-    
     @IBOutlet weak var categoryTable: UITableView!
     
     //--------------------------------------------------------------------------
@@ -44,6 +43,17 @@ class CategoriesVC : UIViewController, UITableViewDataSource, UITableViewDelegat
     
     //--------------------------------------------------------------------------
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "GoToProductsVC", sender: category)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productsVC = segue.destination as? ProductsVC {
+            assert(sender as? Category != nil) // crash application if we did not receive a Category from PerformSegue
+            productsVC.initProductsVC(category: sender as! Category)
+        }
+    }
 }
 //==========================================================================
 
